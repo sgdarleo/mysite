@@ -38,14 +38,19 @@ dih = Image.open("images/DIH.png")
 hengxin = Image.open("images/hengxin.jpg")
 pharmesis = Image.open("images/pharmesis.jpg")
 deloitte = Image.open("images/deloitte.png")
+moppetto = Image.open("images/moppetto.png")
 
 #-----HEADER SECTION
 
 with st.container():
 # -- Wrapping contents within a container --
     st.subheader("Hi, I am Darren Leow :wave:")
-    st.title("Accountant, Strategic Planner, IPO specialist, Corporate Governance advisor, Internal controls, Tax, Transfer Pricing and Team leader")
-    st.write("I am passionate about building businesses from the ground up. I have extensive experience in working with Boards, teams and management from many countries spanning from Asia, Europe, US and South America.")
+# original_title = '<p style="font-family:Courier; color:Blue; font-size: 20px;">Original image</p>'
+    st.write("##")
+    st.markdown('<div style="text-align: justify; font-size: 40px; font-weight: bold; line-height: 100%">Accountant, Strategic Planner, IPO specialist, Corporate Governance advisor, Team leader, Internal controls, Tax and Transfer Pricing</div>', unsafe_allow_html=True)
+    st.write("##")
+    st.markdown('<div style="text-align: justify; font-size: 18px; font-weight: normal; line-height: 1.6">I am passionate about building businesses from the ground up. I have extensive experience in working with Boards, teams and management from many countries spanning from Asia, Europe, US and South America.</div>', unsafe_allow_html=True)
+    st.write("")
     st.write("[More about me >](https://www.linkedin.com/in/darleosg/)")
 
 # ---- What I do
@@ -63,12 +68,9 @@ with st.container():
         st.header("What I do")
         # Creating a space between the lines
         st.write("##")
-        st.write(
-            """
-            I thrive in a roll-up-your-sleeves, fast-paced growth environment where there are multitude of challenges all happening at once. Skillful in bringing to the fore the best in individuals and teams to outperform, unabating devotion to seek efficiencies in laying out long term sustainability, somewhat a perfectionist but an inclination to macro-manage. Well-versed in investor relations, fundraising and IPOs. 
-            """
-        )
-        st.write("[My e-commerce platform](https://www.moppetto.com)")
+        st.markdown('<div style="text-align: justify; font-size: 16px; font-weight: normal; line-height: 1.6">I thrive in a roll-up-your-sleeves, fast-paced growth environment where there are multitude of challenges all happening at once. Skillful in bringing to the fore the best in individuals and teams to outperform, unabating devotion to seek efficiencies in laying out long term sustainability, somewhat a perfectionist but an inclination to macro-manage. Well-versed in investor relations, fundraising and IPOs.</div>', unsafe_allow_html=True)
+        st.write("##")
+        # st.write("[My e-commerce platform](https://www.moppetto.com)")
 
     # --Right column__
     with right_column:
@@ -76,14 +78,38 @@ with st.container():
 
 # --- PAST EXPERIENCES ---
 
+# DIVIDER
+st.write("---")
+st.header("Experiences")
+
+# Creating a space between the lines
+st.write("##")
+
 with st.container():
 # -- Wrapping contents within a container --
 
-    # DIVIDER
-    st.write("---")
-    st.header("Experiences")
-    # Creating a space between the lines
-    st.write("##")
+    # Creating 2 columns
+    image_column, text_column = st.columns((1,2))
+
+    with image_column:
+        st.image(moppetto, width=150)
+
+    with text_column:
+        st.subheader("[Founder/Director: 2018-present](https://www.moppetto.com)")
+        st.write(
+            """
+            - E-commerce platform for Academia and Familial-related activities
+            """
+        )
+
+
+# Creating a space between the lines
+# st.write("##")
+st.write("---")
+st.write("##")
+with st.container():
+# -- Wrapping contents within a container --
+
     # Creating 2 columns
     image_column, text_column = st.columns((1,2))
 
@@ -94,7 +120,7 @@ with st.container():
         st.subheader("[Chief Financial Officer: 2018-2021](https://i-serve.com.my)")
         st.write(
             """
-            - Launch of payment gateway & related initiatives
+            - Payment gateway & fintech related business
             - Offline air-ticketing sales
             - IPO/Fundraising/investor relations
             """
