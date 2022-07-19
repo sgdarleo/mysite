@@ -196,7 +196,7 @@ with st.container():
 
 st.write("##")
 st.write("---")
-
+st.write("##")
 # --- DELOITTE ---
 with st.container():
     image_column, text_column = st.columns((1, 2))
